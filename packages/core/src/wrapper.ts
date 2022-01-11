@@ -46,7 +46,7 @@ export class NativeWrapper<T extends NativeDelegate> {
 			return
 		}
 
-		return new Promise(resolve => this.queue.push(resolve))
+		return new Promise<void>(resolve => this.queue.push(resolve))
 	}
 
 	public ready() {
